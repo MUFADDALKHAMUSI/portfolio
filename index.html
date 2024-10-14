@@ -46,29 +46,18 @@
         }
 
         .download-button {
-            display: inline-block;
             margin-top: 20px;
-            padding: 12px 25px;
+            padding: 10px 20px;
             background-color: orange; /* Button background color */
             color: white;
             border: none;
             border-radius: 5px;
             text-decoration: none;
-            font-size: 18px;
-            transition: background-color 0.3s ease-in-out;
+            transition: background-color 0.3s;
         }
 
         .download-button:hover {
             background-color: #cc8400; /* Darker shade on hover */
-        }
-
-        /* Responsive adjustments */
-        .resume-section {
-            padding: 60px 0;
-        }
-
-        h2 {
-            animation: fadeIn 1s forwards;
         }
     </style>
 </head>
@@ -142,11 +131,10 @@
                         </a>
                     </li>
                 </ul>
-                <div class="text-center mt-4">
-                    <a href="https://github.com/MUFADDALKHAMUSI/portfolio/raw/main/CV%20-%20Mufaddal%20Khamusi.pdf" 
+                <div class="text-center">
+                    <a href="https://github.com/MUFADDALKHAMUSI/portfolio/raw/main/CV%20-%20Mufaddal%20Khamusi%20.pdf" 
                         class="download-button" 
-                        download="CV-Mufaddal-Khamusi.pdf"
-                        aria-label="Download the CV of Mufaddal Khamusi">
+                        download="CV-Mufaddal Khamusi.pdf">
                         Download CV
                     </a>
                 </div>
@@ -204,7 +192,27 @@
                         <i class="devicons devicons-javascript"></i>
                     </li>
                     <li class="list-inline-item">
-                        <i class="devicons devicons-python"></i>
+                        <i class="devicons devicons-jquery"></i>
+                    </li>
+                </ul>
+
+                <div class="subheading mb-3">Workflow</div>
+                <ul class="fa-ul mb-0">
+                    <li>
+                        <i class="fa-li fa fa-check"></i>
+                        Web Development & Front-end Design
+                    </li>
+                    <li>
+                        <i class="fa-li fa fa-check"></i>
+                        Responsive Design
+                    </li>
+                    <li>
+                        <i class="fa-li fa fa-check"></i>
+                        Cross Browser Testing & Debugging
+                    </li>
+                    <li>
+                        <i class="fa-li fa fa-check"></i>
+                        Agile Development & Scrum
                     </li>
                 </ul>
             </div>
@@ -213,31 +221,16 @@
         <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="interests">
             <div class="my-auto">
                 <h2 class="mb-5">Interests</h2>
-                <p>In addition to my passion for cybersecurity, I love playing football, exploring new programming languages, and contributing to open-source projects on GitHub.</p>
+                <p>Apart from being a web developer, I enjoy most of my time playing football. I also like to travel and explore new places, cultures, and cuisines.</p>
             </div>
         </section>
+
     </div>
 
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-    <!-- Plugin JavaScript -->
-    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
-
-    <!-- Custom scripts for this template -->
-    <script src="js/resume.min.js"></script>
-
-    <!-- Smooth Scrolling -->
-    <script>
-        $(document).on('click', 'a.js-scroll-trigger', function(event) {
-            var $anchor = $(this);
-            $('html, body').stop().animate({
-                scrollTop: ($($anchor.attr('href')).offset().top)
-            }, 1250, 'easeInOutExpo');
-            event.preventDefault();
-        });
-    </script>
-
 </body>
+
 </html>
