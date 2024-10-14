@@ -46,18 +46,29 @@
         }
 
         .download-button {
+            display: inline-block;
             margin-top: 20px;
-            padding: 10px 20px;
+            padding: 12px 25px;
             background-color: orange; /* Button background color */
             color: white;
             border: none;
             border-radius: 5px;
             text-decoration: none;
-            transition: background-color 0.3s;
+            font-size: 18px;
+            transition: background-color 0.3s ease-in-out;
         }
 
         .download-button:hover {
             background-color: #cc8400; /* Darker shade on hover */
+        }
+
+        /* Responsive adjustments */
+        .resume-section {
+            padding: 60px 0;
+        }
+
+        h2 {
+            animation: fadeIn 1s forwards;
         }
     </style>
 </head>
@@ -131,10 +142,11 @@
                         </a>
                     </li>
                 </ul>
-                <div class="text-center">
+                <div class="text-center mt-4">
                     <a href="https://github.com/MUFADDALKHAMUSI/portfolio/raw/main/CV%20-%20Mufaddal%20Khamusi.pdf" 
                         class="download-button" 
-                        download="CV-Mufaddal Khamusi.pdf">
+                        download="CV-Mufaddal-Khamusi.pdf"
+                        aria-label="Download the CV of Mufaddal Khamusi">
                         Download CV
                     </a>
                 </div>
@@ -192,27 +204,7 @@
                         <i class="devicons devicons-javascript"></i>
                     </li>
                     <li class="list-inline-item">
-                        <i class="devicons devicons-jquery"></i>
-                    </li>
-                </ul>
-
-                <div class="subheading mb-3">Workflow</div>
-                <ul class="fa-ul mb-0">
-                    <li>
-                        <i class="fa-li fa fa-check"></i>
-                        Mobile-First, Responsive Design
-                    </li>
-                    <li>
-                        <i class="fa-li fa fa-check"></i>
-                        Cross Browser Testing & Debugging
-                    </li>
-                    <li>
-                        <i class="fa-li fa fa-check"></i>
-                        Cross Functional Teams
-                    </li>
-                    <li>
-                        <i class="fa-li fa fa-check"></i>
-                        Website Development & Scrum
+                        <i class="devicons devicons-python"></i>
                     </li>
                 </ul>
             </div>
@@ -221,11 +213,9 @@
         <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="interests">
             <div class="my-auto">
                 <h2 class="mb-5">Interests</h2>
-                <p>Apart from being a Cybersecurity student, I enjoy spending time outdoors. During the warmer months, I enjoy mountain biking, free climbing, and kayaking.</p>
-                <p class="mb-0">When indoors, I follow several sci-fi and fantasy movies and television shows, aspire to be a chef, and spend a lot of time exploring the latest advancements in front-end web development.</p>
+                <p>In addition to my passion for cybersecurity, I love playing football, exploring new programming languages, and contributing to open-source projects on GitHub.</p>
             </div>
         </section>
-
     </div>
 
     <!-- Bootstrap core JavaScript -->
@@ -236,37 +226,18 @@
     <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
 
     <!-- Custom scripts for this template -->
+    <script src="js/resume.min.js"></script>
+
+    <!-- Smooth Scrolling -->
     <script>
-        (function($) {
-            "use strict"; // Start of use strict
-
-            // Smooth scrolling using jQuery easing
-            $('a.js-scroll-trigger[href*="#"]:not([href="#"])').click(function() {
-                if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
-                    var target = $(this.hash);
-                    target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-                    if (target.length) {
-                        $('html, body').animate({
-                            scrollTop: (target.offset().top)
-                        }, 1000, "easeInOutExpo");
-                        return false;
-                    }
-                }
-            });
-
-            // Closes responsive menu when a scroll trigger link is clicked
-            $('.js-scroll-trigger').click(function() {
-                $('.navbar-collapse').collapse('hide');
-            });
-
-            // Activate scrollspy to add active class to navbar items on scroll
-            $('body').scrollspy({
-                target: '#sideNav'
-            });
-
-        })(jQuery); // End of use strict
+        $(document).on('click', 'a.js-scroll-trigger', function(event) {
+            var $anchor = $(this);
+            $('html, body').stop().animate({
+                scrollTop: ($($anchor.attr('href')).offset().top)
+            }, 1250, 'easeInOutExpo');
+            event.preventDefault();
+        });
     </script>
 
 </body>
-
 </html>
