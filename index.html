@@ -48,7 +48,7 @@
         .download-button {
             margin-top: 20px;
             padding: 10px 20px;
-            background-color: orange; /* Button background color */
+            background-color: orange;
             color: white;
             border: none;
             border-radius: 5px;
@@ -57,7 +57,7 @@
         }
 
         .download-button:hover {
-            background-color: #cc8400; /* Darker shade on hover */
+            background-color: #cc8400;
         }
     </style>
 </head>
@@ -87,6 +87,9 @@
                 </li>
                 <li class="nav-item">
                     <a class="nav-link js-scroll-trigger" href="#skills">Skills</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="#projects">Projects</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link js-scroll-trigger" href="#interests">Interests</a>
@@ -131,13 +134,11 @@
                         </a>
                     </li>
                 </ul>
-              <div class="text-center">
-                  <a href="CV - Mufaddal Khamusi .pdf" 
-                      class="download-button" 
-                      download="Mufaddal Khamusi.pdf">
-                      Download CV
-                  </a>
-              </div>
+                <div class="text-center">
+                    <a href="CV - Mufaddal Khamusi .pdf" class="download-button" download="Mufaddal Khamusi.pdf">
+                        Download CV
+                    </a>
+                </div>
             </div>
         </section>
 
@@ -200,37 +201,40 @@
                 <ul class="fa-ul mb-0">
                     <li>
                         <i class="fa-li fa fa-check"></i>
-                        Web Development & Front-end Design
-                    </li>
+                        Mobile-First, Responsive Design</li>
                     <li>
                         <i class="fa-li fa fa-check"></i>
-                        Responsive Design
-                    </li>
+                        Cross Browser Testing & Debugging</li>
                     <li>
                         <i class="fa-li fa fa-check"></i>
-                        Cross Browser Testing & Debugging
-                    </li>
+                        Cross Functional Teams</li>
                     <li>
                         <i class="fa-li fa fa-check"></i>
-                        Agile Development & Scrum
-                    </li>
+                        Agile Development & Scrum</li>
                 </ul>
+            </div>
+        </section>
+
+        <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="projects">
+            <div class="my-auto">
+                <h2 class="mb-5">Projects</h2>
+                <div class="project-item">
+                    <h4>Vending Machine (Python Project)</h4>
+                    <p>Developed a vending machine application using Python with a client-server architecture. The project includes both server and client pages to simulate real-world vending transactions.</p>
+                </div>
             </div>
         </section>
 
         <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="interests">
             <div class="my-auto">
                 <h2 class="mb-5">Interests</h2>
-                <p>Apart from being a web developer, I enjoy most of my time playing football. I also like to travel and explore new places, cultures, and cuisines.</p>
+                <p>I enjoy football and am currently studying cybersecurity, with an interest in the ever-evolving field of digital forensics.</p>
             </div>
         </section>
-
     </div>
 
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
 </body>
-
 </html>
